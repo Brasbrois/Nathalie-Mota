@@ -1,0 +1,136 @@
+/*  Modal (background) */
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.6); 
+}
+       
+/* Modal (Box) */
+.modal-content {
+  max-width: 597px;
+  max-height: 769px;
+  background-color: #fefefe;
+  padding-bottom: 6.1em;
+  margin: 15% auto; 
+  border: 5px solid #000000;
+  width: 80%; 
+  animation: slide-down 1s ease;
+}
+
+/* Formulaire de contact */
+#wpforms-form-33 .wpforms-field-label  {
+  font-family: 'poppins';
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: 500;
+  margin: 2px !important;
+}
+
+.wpforms-field-container {
+  margin-top: 2.8em !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wpforms-field-medium, .wpforms-field-large {
+  width: 263px !important;
+}
+
+.wpforms-submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+#wpforms-submit-33 {
+  background-color: #D8D8D8;
+  color: black;
+  border: transparent;
+  border-radius: 2px;
+  font-family: 'space-mono';
+  font-size: 13px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.0004);
+  padding: 8px 15px 8px 15px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 272px;
+  height: 50px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+#wpforms-submit-33:hover {
+  background-color: black;
+  color: white;
+}
+
+#wpforms-33-field_0, #wpforms-22-field_1, #wpforms-22-field_2, #wpforms-22-field_3 {
+  border-radius: 10px;
+}
+
+#wpforms-33-field_2 {
+  height: 210px;
+}
+
+.img-contact {
+  padding-top: 10px;
+}
+
+/* Media Queries */
+@media all and (max-width: 768px) {
+  .modal {
+    top: 8%
+  }
+  .modal-content {
+    width: 60%;
+    padding-bottom: 0;
+  }
+  .wpforms-container .wpforms-submit-container {
+    padding: inherit !important;
+  }
+  .wpforms-container .wpforms-field {
+    padding: 10px 0 !important;
+  }
+  #wpforms-33-field_2 {
+    height: 149px;
+  }
+  .wpforms-field-container {
+    margin-top: 0 !important;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .modal {
+    top: 12%
+  }
+  .modal-content {
+    width: 70%;
+  }
+  .wpforms-container .wpforms-field {
+    padding: 5px 0 !important;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .modal-content {
+    width: 80%;
+  }
+  .wpforms-container .wpforms-field {
+    padding: 2px 0 !important;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .modal-content {
+    width: 90%;
+  }
+}

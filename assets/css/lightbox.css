@@ -1,0 +1,183 @@
+/* on cache la lightbox par défaut */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* fond noir transparent à 80% */
+    overflow: auto;
+    z-index: 10;
+    animation: slide-down 1s ease;
+}
+
+/* quand la classe "active" est ajoutée via JS, la lightbox devient visible */
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* contenu de la lightbox */
+.lightbox-div {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-thumbnail {
+    height: 82vh;
+    width: 100%;
+    margin: auto;
+}
+
+.lightbox-info {
+    width: 100%;
+}
+
+.lightbox-div-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.lightbox-reference {
+    color: white;
+    font-family: 'poppins';
+    font-size: 14px;
+}
+.lightbox-category {
+    font-family: "space-mono", monospace;
+    font-size: 14px;
+    color: white;
+}
+
+/* crossmark */
+.close-lightbox {
+    background: none;
+    border: none;
+    width: 1.8em;
+    height: 1.8em;
+    margin-left: 92%;
+    padding-top: 5%;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.close-lightbox>img {
+    position: fixed;
+    transition: transform .5s ease-in-out;
+}
+
+.close-lightbox>img:hover {
+    transform: rotate(180deg);
+}
+
+/* navigation */
+.previous-pic-lightbox,
+.next-pic-lightbox {
+  background: none;
+  border: none;
+  position: relative;
+  top: 44.45%;
+  width: 10.5%;
+  z-index: 11;
+  cursor: pointer; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-family: "space-mono", monospace;
+}
+
+.next-pic-lightbox {
+    margin-left: 89%;
+    top: 42.25%;
+}
+
+.previous-pic-lightbox span {
+    margin-left: 10px;
+}
+
+.next-pic-lightbox span {
+    margin-right: 10px;
+}
+
+.previous-pic-lightbox:hover, .next-pic-lightbox:hover {
+    font-weight: 600;
+}
+
+.previous-pic-lightbox,
+.next-pic-lightbox {
+    transition: transform 0.3s ease-out; /* transition pour mise à l'échelle pendant 0,3s */
+}
+
+/* on agrandit les boutons au survol */
+.previous-pic-lightbox:hover,
+.next-pic-lightbox:hover {
+    transform: scale(1.15); /* 15% */
+}
+
+
+/* Media Queries navigation */
+@media all and (max-width: 1024px) {
+    .previous-pic-lightbox span {
+        margin-left: 3px;
+        font-size: 8.5px;
+    }
+    .next-pic-lightbox span {
+        margin-right: 3px;
+        font-size: 8.5px;
+    }
+    .next-pic-lightbox span:hover, .previous-pic-lightbox span:hover {
+        font-size: 9.5px;
+    }
+    .previous-pic-lightbox:hover,
+    .next-pic-lightbox:hover {
+        transform: scale(1.05); /* 5% */
+    }
+}
+
+/* tablette */
+@media all and (max-width: 768px) {
+    .previous-pic-lightbox span,  .next-pic-lightbox span {
+        display: none;
+    }
+    .previous-pic-lightbox:hover,
+    .next-pic-lightbox:hover {
+        transform: scale(1.2); /* 20% */
+    }
+    .close-lightbox {
+        padding-top: 12.5%;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .close-lightbox {
+        padding-top: 16%;
+        margin-left: 87%;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .close-lightbox {
+        padding-top: 22.5%;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .close-lightbox {
+        padding-top: 25%;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .close-lightbox {
+        padding-top: 29%;
+        margin-left: 85%;
+    }
+}

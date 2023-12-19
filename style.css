@@ -1,0 +1,33 @@
+/*
+Theme Name: Nathalie Mota
+Theme URI: https://www.NathalieMota.fr
+Author: RicardBaptiste
+Description: Thème pour Nathalie Mota Photographe
+Version: 1.0
+Tags: openclassrooms, photographie, portofolio
+Text Domain: NathalieMota
+*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+html {
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
